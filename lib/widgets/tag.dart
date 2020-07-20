@@ -16,10 +16,12 @@ class Tag extends StatelessWidget {
     Key key,
     this.text,
     this.type: TagStyle.jueJin,
+    this.color
   }):super(key:key);
 
   final String text;
   final TagStyle type;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +35,9 @@ class Tag extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(ScreenUtil().setWidth(5)),
-        color: _buildColor().withOpacity(0.05),
+        color: color!= null ? color.withOpacity(0.05) : _buildColor().withOpacity(0.05),
         border: Border.all(
-          color: _buildColor(),
+          color: color!= null ? color : _buildColor(),
           width: ScreenUtil().setWidth(1.5)
         )
       ),
@@ -43,7 +45,7 @@ class Tag extends StatelessWidget {
         "$text",
         style: GoogleFonts.barlow(
             fontSize: ScreenUtil().setSp(25),
-            color: _buildColor()
+            color: color!= null ? color : _buildColor()
         ),
       ),
     );

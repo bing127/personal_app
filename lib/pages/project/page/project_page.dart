@@ -29,6 +29,9 @@ class _ProjectPageState extends State<ProjectPage> {
       ),
       body: SafeArea(
         child: ListView(
+          padding: EdgeInsets.only(
+              bottom: ScreenUtil().setHeight(20)
+          ),
           children: <Widget>[
             ProjectItem(
               dateTime: "2019-03-13 05:59:23",

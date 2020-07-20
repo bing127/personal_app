@@ -48,13 +48,14 @@ class Panel extends StatelessWidget {
                       borderRadius: BorderRadius.circular(ScreenUtil().setWidth(20))
                     ),
                     margin: EdgeInsets.only(
-                      right: ScreenUtil().setWidth(5)
+                      right: ScreenUtil().setWidth(8)
                     ),
                   ),
                   Text(
                     "$title",
                     style: GoogleFonts.barlow(
-                        fontSize: ScreenUtil().setSp(28)
+                        fontSize: ScreenUtil().setSp(30),
+                        fontWeight: FontWeight.w600
                     ),
                   )
                 ],
